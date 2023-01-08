@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Oswald:wght@300;400;700&display=swap');
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: 'Oswald', 'Monsterrat';
+}
+a {
+    text-decoration: none;
+}
+p{
+    color: black;
+    font-size: 2rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-family: 'Montserrat', 'Monsterrat', sans-serif;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+img {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section-title{
+    font-size: 4rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing:.2rem;
+    text-align: center;
+}
+.section-title span{
+    color: blueviolet;
+}
+.cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: wheat;
+    font-size: 20px;
+    background-color: transparent;
+    border: 2px solid wheat;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 20px;
+    transition: .75s ease background-color;
+    transition-property: background-color, color;
+    
+}
+.cta:hover{
+    color: black;
+    text-decoration: none;
+    background-color: wheat;
+}
+
+/* Intro Section */
+
+#intro{
+    background-image: url(./img/webbg.png);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+}
+#intro::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+#intro .intro{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+     
+}
+#intro h1 {
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1s;
+}
+#intro h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: wheat;
+    animation: text_reveal_box 1s ease;
+    animation-delay: .5s;
+}
+#intro h1:nth-child(1) span{
+    animation-delay: .5s;
+}
+#intro h1:nth-child(2) span{
+    animation-delay: 1s;
+}
+#intro h1:nth-child(3) span{
+    animation-delay: 1.5s;
+}
+#intro h1:nth-child(1){
+    animation-delay: 1s;
+}
+#intro h1:nth-child(2){
+    animation-delay: 1.5s;
+}
+#intro h1:nth-child(3){
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 2s;
+}
+
+/* Intro Section End */
+
+
+/* Members Section */
+#infos{
+    background-image: url(./img/infobg.png);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+}
+#infos .infocontainer{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+    z-index: 1;
+}
+#infos .infocontainer::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    opacity: .5;
+    z-index: -1;
+}
+#infos  .teammember p{
+    font-size: 3rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300px;
+    letter-spacing: .05rem;
+    color: black;
+    font-family: "Oswald";
+}
+#infos .teammembers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+#infos .teammember1{
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: url(./img/membersbg.png);
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;   
+}
+#infos .teammember1::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity: .8;
+    z-index: -1;
+}
+#infos .teammembers .icon {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+}
+#infos .teammember1 h2 {
+    font-size: 2rem;
+    color: aliceblue;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+#infos .teammember1 p{
+    color: aliceblue;
+    text-align: left;
+}
+
+/* Members Section End */
+
+
+/* Project Section */
+#project{
+    background-image: url(./img/infobg.png);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: -1;
+}
+#project .project{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#project .project-header{
+    margin-bottom: 50px;
+}
+#project .website{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#project .ecom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+#project .project-info{
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-color: wheat;
+}
+#project.project-info h1{
+    font-size: 4rem;
+    font-weight: 500;
+}
+#project.project-info h2{
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-top: 10px;
+}
+#project .project-img{
+    flex-basis: 50%;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+#project .project-img::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: dimgray;
+    opacity: .3;
+}
+#project .project-img img{
+    transition: .3s ease transform;
+}
+#project .ecom:hover .project-img img{
+    transform: scale(1.1);
+}
+
+/* Project section end */
+
+
+/* Outcome Section */
+#outcome{
+    background-image: url(./img/sectionbg.png);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+}
+#outcome .outcome{
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+#outcome .col-right{
+    width: 100%;
+}
+#outcome .col-right h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    margin-bottom: 20px;    
+}
+#outcome .col-right p{
+    margin-bottom: 20px;
+}
+#outcome .col-right .cta{
+    color: black;
+    border-color: purple;
+    margin-bottom: 50px;
+}
+#outcome .outcome-img img{
+    margin: auto;
+    width: 75%;
+    height: auto;
+}
+/* Outcome Section End */
+
+
+/* Keyframe */
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes text_reveal{
+    100%{
+        color: white;
+    }
+}
+@keyframes text_reveal_name {
+100%{
+    color: lightblue;
+}    
+}
+/* Keyframe End */
+
+/* Scroll to top button */
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    z-index: 999;
+  }
+  
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
+/* Scroll to top end */
